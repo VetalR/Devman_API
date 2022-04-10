@@ -1,7 +1,7 @@
 import requests
 from requests_body import Weather
 
-LOCATIONS = ['San-francisco', 'Sheremetievo', 'Cherepovets']
+LOCATIONS = ['London', 'Sheremetievo', 'Cherepovets']
 
 
 def _weather(loc, param):
