@@ -1,19 +1,20 @@
 import requests
-from requests_body import Weather
 
 LOCATIONS = ['London', 'Sheremetievo', 'Cherepovets']
 
 
-def _weather(loc, param):
-    response = requests.get(url=f'http://wttr.dvmn.org/{loc}', params=param)
+def check_weather(location):
+    weather_param = {
+        'nTqu': '',
+        'lang': 'ru',
+        'Kum': ''
+    }
+    response = requests.get(url=f'http://wttr.dvmn.org/{location}',
+                            params=weather_param)
     response.raise_for_status()
     return response.text
 
 
-def main():
-    for location in LOCATIONS:
-        print(_weather(location, Weather.weather_param))
-
-
 if __name__ == '__main__':
-    main()
+    for locate in LOCATIONS:
+        print(check_weather(locate))
