@@ -5,9 +5,9 @@ LOCATIONS = ['London', 'Sheremetievo', 'Cherepovets']
 
 def check_weather(location):
     weather_param = {
-        'nTqu': '',
+        'nTq': '',
         'lang': 'ru',
-        'Kum': ''
+        'Km': ''
     }
     response = requests.get(url=f'http://wttr.dvmn.org/{location}',
                             params=weather_param)
