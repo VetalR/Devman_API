@@ -16,5 +16,5 @@ def check_weather(location):
 
 
 if __name__ == '__main__':
-    for locate in LOCATIONS:
-        print(check_weather(locate))
+    for location in LOCATIONS:
+        print(check_weather(location))
